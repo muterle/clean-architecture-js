@@ -1,4 +1,5 @@
 const userRegistrationUseCase = require("./user-registration.usecase");
+const AppError = require("../shared/errors/AppError");
 
 describe("User Registration Use Case", () => {
   const usersRepository = {
@@ -23,6 +24,6 @@ describe("User Registration Use Case", () => {
   });
 
   test("should throw if any dependency throws", async () => {
-    expect(() => userRegistrationUseCase({})).toThrow("usersRepository is required");
+    expect(() => userRegistrationUseCase({})).toThrow(AppError.dependencies);
   });
 });

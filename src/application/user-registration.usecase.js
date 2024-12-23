@@ -1,6 +1,8 @@
+const AppError = require("../shared/errors/AppError");
+
 module.exports = function UserRegistrationUseCase({ usersRepository }) {
   if (!usersRepository) {
-    throw new Error("usersRepository is required");
+    throw new AppError(AppError.dependencies);
   }
 
   return async function ({ full_name, cpf, phone, address, email }) {
