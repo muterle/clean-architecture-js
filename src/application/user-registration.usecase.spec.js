@@ -4,6 +4,7 @@ const AppError = require("../shared/errors/AppError");
 describe("User Registration Use Case", () => {
   const usersRepository = {
     create: jest.fn(),
+    findByCpf: jest.fn(),
   };
 
   test("should register a new user", async () => {
@@ -31,5 +32,19 @@ describe("User Registration Use Case", () => {
     const sut = userRegistrationUseCase({ usersRepository });
 
     await expect(() => sut({})).rejects.toThrow(AppError.userParamsNotProvided);
+  });
+
+  test("should throw if user already exists", async () => {
+    usersRepository.findByCpf.mockResolvedValueOnce(true);
+    const userDto = {
+      full_name: "Full Name",
+      email: "email@emal.com",
+      cpf: "12345678909",
+      phone: "1199887755",
+      address: "User Street, 123",
+    };
+
+    const sut = userRegistrationUseCase({ usersRepository });
+    await expect(() => sut(userDto)).rejects.toThrow(AppError.userAlreadyExists);
   });
 });

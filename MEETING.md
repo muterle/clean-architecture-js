@@ -5,12 +5,12 @@
 ## Dados
 
 - Usuário: [nome_completo, CPF, telefone, endereço, email]
-- Livro: [nome, quantidade, quantidade, autor, genero, ISBN]
-- Emprestimo: [usuario_id, livro_id, data_retorno, data_devolucao, data_saida]
+- Livro: [nome, quantidade, quantidade, autor, gênero, ISBN]
+- Empréstimo: [usuario_id, livro_id, data_retorno, data_devolução, data_saída]
 
 ## UseCases (Regras de Negócio)
 
-[] Cadastrar um novo usuário
+[X] Cadastrar um novo usuário
 [] - CPF ou email devem ser únicos
 
 [] Buscar um cadastro de usuário por CPF
