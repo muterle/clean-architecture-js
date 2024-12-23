@@ -21,4 +21,8 @@ describe("User Registration Use Case", () => {
     expect(usersRepository.create).toHaveBeenCalledWith(userDto);
     expect(usersRepository.create).toHaveBeenCalledTimes(1);
   });
+
+  test("should throw if any dependency throws", async () => {
+    expect(() => userRegistrationUseCase({})).toThrow("usersRepository is required");
+  });
 });
