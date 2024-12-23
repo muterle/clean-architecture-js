@@ -32,3 +32,8 @@
 [] - Caso o usuário tenha atrasado, será gerada uma multa fixa de R$10,00
 
 [] Mostrar todos os empréstimos pendentes, com o nome do livro, nome do usuário, CPF, data de saída e data de retorno mais antiga
+
+## Estrutura
+
+###UsersRepository
+[] create:({ full_name, cpf, phone, address, email }) => Promise<void>
