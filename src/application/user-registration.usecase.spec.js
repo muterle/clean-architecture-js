@@ -26,4 +26,10 @@ describe("User Registration Use Case", () => {
   test("should throw if any dependency throws", async () => {
     expect(() => userRegistrationUseCase({})).toThrow(AppError.dependencies);
   });
+
+  test("should throw if any user parameter is not provided", async () => {
+    const sut = userRegistrationUseCase({ usersRepository });
+
+    await expect(() => sut({})).rejects.toThrow(AppError.userParamsNotProvided);
+  });
 });

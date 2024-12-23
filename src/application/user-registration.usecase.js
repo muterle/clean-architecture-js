@@ -6,6 +6,11 @@ module.exports = function UserRegistrationUseCase({ usersRepository }) {
   }
 
   return async function ({ full_name, cpf, phone, address, email }) {
+    const checkData = full_name && cpf && phone && address && email;
+    if (!checkData) {
+      throw new AppError(AppError.userParamsNotProvided);
+    }
+
     await usersRepository.create({ full_name, cpf, phone, address, email });
   };
 };

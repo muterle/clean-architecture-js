@@ -5,4 +5,5 @@ module.exports = class AppError extends Error {
   }
 
   static dependencies = "Dependency not provided";
+  static userParamsNotProvided = "User params not provided";
 };
