@@ -26,4 +26,19 @@ describe("Find user by CPF UseCase", () => {
     expect(usersRepository.findByCpf).toHaveBeenCalledWith(cpfDto.cpf);
     expect(usersRepository.findByCpf).toHaveBeenCalledTimes(1);
   });
+
+  test("Return null if user not exists", async () => {
+    usersRepository.findByCpf.mockResolvedValue(null);
+
+    const cpfDto = {
+      cpf: "12345678900",
+    };
+
+    const sut = findUserByCpfUsecase({ usersRepository });
+    const output = await sut(cpfDto);
+
+    expect(output.right).toBeNull();
+    expect(usersRepository.findByCpf).toHaveBeenCalledWith(cpfDto.cpf);
+    expect(usersRepository.findByCpf).toHaveBeenCalledTimes(1);
+  });
 });
