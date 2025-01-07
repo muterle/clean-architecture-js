@@ -43,7 +43,13 @@ describe("Find user by CPF UseCase", () => {
     expect(usersRepository.findByCpf).toHaveBeenCalledTimes(1);
   });
 
-  test("should throw if any dependency throws", async () => {
+  test("Should throw if any dependency throws", async () => {
     expect(() => findUserByCpfUsecase({})).toThrow(AppError.dependencies);
+  });
+
+  test("Should throw if CPF not provided", async () => {
+    const sut = findUserByCpfUsecase({ usersRepository });
+
+    await expect(() => sut({})).rejects.toThrow(AppError.userParamsNotProvided);
   });
 });
