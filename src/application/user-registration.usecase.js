@@ -1,3 +1,4 @@
+const { Either } = require("../shared/errors");
 const AppError = require("../shared/errors/AppError");
 
 module.exports = function UserRegistrationUseCase({ usersRepository }) {
@@ -8,8 +9,13 @@ module.exports = function UserRegistrationUseCase({ usersRepository }) {
     if (!checkData) throw new AppError(AppError.userParamsNotProvided);
 
     const checkUserExistsByCpf = await usersRepository.findByCpf(cpf);
-    if (checkUserExistsByCpf) throw new AppError(AppError.userAlreadyExists);
+    if (checkUserExistsByCpf) return Either.Left(Either.valueAlreadyRegistered("CPF"));
+
+    const checkUserExistsByEmail = await usersRepository.findByEmail(email);
+    if (checkUserExistsByEmail) return Either.Left(Either.valueAlreadyRegistered("EMAIL"));
 
     await usersRepository.create({ full_name, cpf, phone, address, email });
+
+    return Either.Right(null);
   };
 };
