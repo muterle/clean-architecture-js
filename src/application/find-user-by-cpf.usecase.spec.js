@@ -1,3 +1,4 @@
+const { AppError } = require("../shared/errors");
 const findUserByCpfUsecase = require("./find-user-by-cpf.usecase");
 
 describe("Find user by CPF UseCase", () => {
@@ -40,5 +41,9 @@ describe("Find user by CPF UseCase", () => {
     expect(output.right).toBeNull();
     expect(usersRepository.findByCpf).toHaveBeenCalledWith(cpfDto.cpf);
     expect(usersRepository.findByCpf).toHaveBeenCalledTimes(1);
+  });
+
+  test("should throw if any dependency throws", async () => {
+    expect(() => findUserByCpfUsecase({})).toThrow(AppError.dependencies);
   });
 });
