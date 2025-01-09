@@ -1,3 +1,4 @@
+const { AppError } = require("../shared/errors");
 const bookRegistrationUsecase = require("./book-registration.usecase");
 
 describe("Book Registration Use Case", () => {
@@ -19,5 +20,9 @@ describe("Book Registration Use Case", () => {
     expect(output.right).toBeNull();
     expect(booksRepository.create).toHaveBeenCalledWith(bookDto);
     expect(booksRepository.create).toHaveBeenCalledTimes(1);
+  });
+
+  test("should throw if any dependency throws", async () => {
+    expect(() => bookRegistrationUsecase({})).toThrow(AppError.dependencies);
   });
 });

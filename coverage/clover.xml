@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736455836792" clover="3.2.0">
-  <project timestamp="1736455836792" name="All files">
-    <metrics statements="79" coveredstatements="79" conditionals="28" coveredconditionals="27" methods="10" coveredmethods="10" elements="117" coveredelements="116" complexity="0" loc="79" ncloc="79" packages="2" files="6" classes="6"/>
+<coverage generated="1736456025599" clover="3.2.0">
+  <project timestamp="1736456025599" name="All files">
+    <metrics statements="79" coveredstatements="79" conditionals="28" coveredconditionals="28" methods="10" coveredmethods="10" elements="117" coveredelements="117" complexity="0" loc="79" ncloc="79" packages="2" files="6" classes="6"/>
     <package name="application">
-      <metrics statements="44" coveredstatements="44" conditionals="22" coveredconditionals="21" methods="4" coveredmethods="4"/>
+      <metrics statements="44" coveredstatements="44" conditionals="22" coveredconditionals="22" methods="4" coveredmethods="4"/>
       <file name="book-registration.usecase.js" path="/Users/muterle/workspace/studying/clean-architecture-js/src/application/book-registration.usecase.js">
-        <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="7" count="1" type="stmt"/>
@@ -64,9 +64,9 @@
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
