@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736457056601" clover="3.2.0">
-  <project timestamp="1736457056601" name="All files">
-    <metrics statements="86" coveredstatements="86" conditionals="36" coveredconditionals="36" methods="10" coveredmethods="10" elements="132" coveredelements="132" complexity="0" loc="86" ncloc="86" packages="2" files="6" classes="6"/>
+<coverage generated="1736459498509" clover="3.2.0">
+  <project timestamp="1736459498509" name="All files">
+    <metrics statements="99" coveredstatements="99" conditionals="42" coveredconditionals="42" methods="12" coveredmethods="12" elements="153" coveredelements="153" complexity="0" loc="99" ncloc="99" packages="2" files="7" classes="7"/>
     <package name="application">
-      <metrics statements="50" coveredstatements="50" conditionals="30" coveredconditionals="30" methods="4" coveredmethods="4"/>
+      <metrics statements="63" coveredstatements="63" conditionals="36" coveredconditionals="36" methods="6" coveredmethods="6"/>
       <file name="book-registration.usecase.js" path="/Users/muterle/workspace/studying/clean-architecture-js/src/application/book-registration.usecase.js">
         <metrics statements="16" coveredstatements="16" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -22,6 +22,22 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
+      </file>
+      <file name="find-books-by-title-or-isbn.usecase.js" path="/Users/muterle/workspace/studying/clean-architecture-js/src/application/find-books-by-title-or-isbn.usecase.js">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
       <file name="find-user-by-cpf.usecase.js" path="/Users/muterle/workspace/studying/clean-architecture-js/src/application/find-user-by-cpf.usecase.js">
         <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>

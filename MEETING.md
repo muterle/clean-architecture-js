@@ -17,7 +17,7 @@
 [X] - Retornar um usuário ou vazio
 
 [X] Cadastrar um novo livro
-[] - ISBN deve ser único
+[X] - ISBN deve ser único
 
 [] Buscar um livro por nome ou ISBN
 [] - Retornar um livro ou vazio
@@ -35,7 +35,13 @@
 
 ## Estrutura
 
-###UsersRepository
+### UsersRepository
+
 [] create:({ full_name, cpf, phone, address, email }) => Promise<void>
 [] findByCpf(cpf) => Promise<boolean>
 [] findByEmail(email) => Promise<boolean>
+
+### BooksRepository
+
+[X] create({ name, quantity, author, genre, isbn }) => Promise<void>
+[] findByNameOrISBN(filter) => Promise<boolean>
