@@ -7,4 +7,5 @@ module.exports = class AppError extends Error {
   static dependencies = "Dependency not provided";
   static userParamsNotProvided = "User params not provided";
   static userAlreadyExists = "User already exists";
+  static bookParamsNotProvided = "Book params not provided";
 };
